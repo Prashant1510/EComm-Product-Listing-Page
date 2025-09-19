@@ -12,7 +12,7 @@ const Content = () => {
             <p className="text-sm font-normal text-white">
               Performance and Design. Taken right to the edge
             </p>
-            <button className="text-sm text-white underline">SHOP NOW</button>
+            <button className="text-sm text-white underline cursor-pointer">SHOP NOW</button>
           </div>
           <div className="banner-image">
             <img
