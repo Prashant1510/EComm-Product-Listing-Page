@@ -19,7 +19,7 @@ export default function Navbar() {
           {links.map((link, id) => (
             <li
               key={id}
-              className={`uppercase text-sm tracking-widest cursor-pointer  ${
+              className={`uppercase text-sm tracking-wider cursor-pointer  ${
                 link === "Home"
                   ? "text-sky-500 font-semibold"
                   : "text-gray-800 hover:text-sky-500"
