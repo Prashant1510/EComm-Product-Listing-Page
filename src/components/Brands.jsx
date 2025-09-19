@@ -2,22 +2,19 @@
 import React from "react";
 import { useState } from "react";
 
-const HotDeals = () => {
+const Brands = () => {
 
-  const [activeDeal, setActiveDeal] = useState("Airmax");
+  const [activeBrand, setActiveBrand] = useState("Nike");
   const deals = [
-    { name: "Nike", count: 2 },
-    { name: "Airmax", count: 48},
-    { name: "Puma", count: 14 },
-    { name: "Adidas", count: 15 },
-    { name: "Zara", count: 23 },
-    { name: "Bata", count: 1 },
-    { name: "Campus", count: 95 },
+    { name: "Nike", count: 26 },
+    { name: "Puma", count: 28},
+    { name: "Adidas", count: 35 },
+    { name: "Siemens", count: 75 },
   ];
 
   return (
     <div className="bg-gray-50 p-5 rounded-sm shadow-sm w-64">
-      <h2 className="text-lg font-semibold mb-4">Hot Deals</h2>
+      <h2 className="text-lg font-semibold mb-4">BRAND</h2>
       <ul className="space-y-3">
         {deals.map((deal, index) => (
           <li
@@ -26,16 +23,16 @@ const HotDeals = () => {
           >
             <span
               className={`${
-                activeDeal === deal.name
+                activeBrand === deal.name
                   ? "text-blue-500 font-medium cursor-pointer hover:underline"
                   : ""
-              }`} onClick={() => setActiveDeal(deal.name)}
+              }`} onClick={() => setActiveBrand(deal.name)}
             >
               {deal.name}
             </span>
             <span
               className={`${
-                activeDeal === deal.name ? "text-blue-500 font-medium" : "text-gray-500"
+                activeBrand === deal.name ? "text-blue-500 font-medium" : "text-gray-500"
               }`}
             >
               {deal.count}
@@ -47,4 +44,4 @@ const HotDeals = () => {
   );
 };
 
-export default HotDeals;
+export default Brands;
