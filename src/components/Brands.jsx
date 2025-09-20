@@ -15,7 +15,7 @@ const Brands = () => {
   return (
     <div className="bg-gray-50 p-5 rounded-sm shadow-sm w-64">
       <h2 className="text-lg font-semibold mb-4">BRAND</h2>
-      <ul className="space-y-3">
+      <ul className="space-y-6">
         {deals.map((deal, index) => (
           <li
             key={index}

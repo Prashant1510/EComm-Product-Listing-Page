@@ -14,7 +14,7 @@ function Toolbar({ itemCount = 13, onSortChange, onShowChange }) {
   const [view, setView] = useState("grid");
 
   return (
-    <div className="bg-gray-50 rounded flex items-center py-3 px-2 gap-6 text-sm justify-between w-full">
+    <div className="bg-gray-50 rounded flex items-center mb-2 py-2 px-2 gap-6 text-sm justify-between w-full">
       <span className="ml-2">{itemCount} Items</span>
 
       {/* First Dropdown */}

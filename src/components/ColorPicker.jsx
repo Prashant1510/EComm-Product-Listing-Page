@@ -7,8 +7,8 @@ function ColorPicker() {
 
   return (
     <div className="bg-gray-50 p-4 rounded shadow-sm w-max">
-      <h2 className="font-semibold mb-2">COLOR</h2>
-      <div className="flex gap-3 pt-2 pb-2"> 
+      <h2 className="font-semibold mb-3">COLOR</h2>
+      <div className="flex gap-3 pt-5 pb-5"> 
         {colors.map((color) => (
           <button
             key={color}
