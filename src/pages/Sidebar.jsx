@@ -7,7 +7,7 @@ import Brands from "../components/Brands";
 
 const Sidebar = ({ onClose, isMobile }) => {
   return (
-    <div className="relative flex flex-col gap-6 p-2 md:p-0 ">
+    <div className="relative flex flex-col gap-6 p-2 md:p-0 md:w-[20vw] md:max-w-72">
       {/* Close button for mobile overlay */}
       {isMobile && (
         <button

@@ -24,7 +24,7 @@ function SiteInfoFooter() {
   return (
     <div className="bg-sky-100 w-full py-5">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-4 gap-10 text-center sm:text-left">
+        <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-24 text-center md:text-left">
           {links.map(col => (
             <div key={col.heading}>
               <h3 className="text-lg font-semibold mb-3 text-gray-800">{col.heading}</h3>

@@ -6,7 +6,7 @@ function ColorPicker() {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
 
   return (
-    <div className="bg-gray-50 p-4 rounded shadow-sm md:w-72 w-full">
+    <div className="bg-gray-50 p-4 rounded shadow-sm">
       <h2 className="font-semibold mb-3">COLOR</h2>
       <div className="flex gap-3 pt-5 pb-5 justify-around md:justify-center"> 
         {colors.map((color) => (

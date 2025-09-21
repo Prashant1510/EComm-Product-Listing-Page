@@ -16,7 +16,7 @@ const HotDeals = () => {
   ];
 
   return (
-    <div className="bg-gray-50 p-5 rounded-sm shadow-sm md:w-72 w-full mt-15 md:mt-0">
+    <div className="bg-gray-50 p-5 rounded-sm shadow-sm mt-15 md:mt-0">
       <h2 className="text-lg font-semibold mb-4">Hot Deals</h2>
       <ul className="space-y-5 ">
         {deals.map((deal, index) => (
