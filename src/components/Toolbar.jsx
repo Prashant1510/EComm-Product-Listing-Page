@@ -15,10 +15,10 @@ function Toolbar({ itemCount = 13, onSortChange, onShowChange }) {
 
   return (
     <div className="bg-gray-50 rounded flex items-center mb-2 py-2 px-2 gap-6 text-sm justify-between w-full">
-      <span className="ml-2">{itemCount} Items</span>
+      <span className="ml-2 hidden sm:block">{itemCount} Items</span>
 
       {/* First Dropdown */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1 sm:gap-2">
         <span>Sort By</span>
         <div className="relative">
           <select
@@ -39,7 +39,7 @@ function Toolbar({ itemCount = 13, onSortChange, onShowChange }) {
       </div>
 
       {/* Second Dropdown */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1 sm:gap-2">
         <span>Show</span>
         <div className="relative">
           <select
@@ -60,7 +60,7 @@ function Toolbar({ itemCount = 13, onSortChange, onShowChange }) {
       </div>
 
       {/* Spacer */}
-      <div className="flex-grow" />
+      <div className="flex-grow hidden sm:block" />
 
       {/* View Mode Switch */}
       <ToggleButtonGroup

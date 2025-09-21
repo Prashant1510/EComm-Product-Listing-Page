@@ -6,9 +6,9 @@ function ColorPicker() {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
 
   return (
-    <div className="bg-gray-50 p-4 rounded shadow-sm w-max">
+    <div className="bg-gray-50 p-4 rounded shadow-sm md:w-72 w-full">
       <h2 className="font-semibold mb-3">COLOR</h2>
-      <div className="flex gap-3 pt-5 pb-5"> 
+      <div className="flex gap-3 pt-5 pb-5 justify-around md:justify-center"> 
         {colors.map((color) => (
           <button
             key={color}
@@ -17,7 +17,7 @@ function ColorPicker() {
             className={`
               h-7 w-7 rounded-full 
               transition
-              flex items-center justify-center
+              flex items-center justify-center  
               ${selectedColor === color ? "ring-2  ring-gray-300 ring-offset-2" : ""}
             `}
             style={{

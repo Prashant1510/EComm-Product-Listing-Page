@@ -22,7 +22,7 @@ function SiteInfoFooter() {
   ];
 
   return (
-    <div className="bg-sky-100 w-full py-10">
+    <div className="bg-sky-100 w-full py-5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-4 gap-10 text-center sm:text-left">
           {links.map(col => (
@@ -36,7 +36,7 @@ function SiteInfoFooter() {
             </div>
           ))}
         </div>
-        <hr className="mt-8 border-white  " />
+        <hr className="mt-4 border-white  " />
       </div>
     </div>
   );

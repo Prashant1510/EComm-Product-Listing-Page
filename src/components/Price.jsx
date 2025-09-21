@@ -3,7 +3,7 @@ import { Range, getTrackBackground } from "react-range";
 
 const steps = 1.01;
 const min = 0;
-const max = 100;
+const max = 101;
 
 function PriceFilter() {
   const [values, setValues] = useState([min, max]);
@@ -37,7 +37,7 @@ function PriceFilter() {
             {children}
           </div>
         )}
-        renderThumb={({ props}) => (
+        renderThumb={({ props }) => (
           <div
             {...props}
             className="h-4 w-4 rounded-full bg-blue-600 border-2 border-white"

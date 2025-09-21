@@ -1,9 +1,9 @@
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 
-function FooterSimple() {
+function FooterContact() {
   return (
-    <footer className="bg-sky-100 py-12">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 gap-24 sm:items-start">
+    <footer className="bg-sky-100 py-5">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 gap-24 sm:items-center sm:flex-col ">
 
         {/* Brand/Info */}
 
@@ -47,4 +47,4 @@ function FooterSimple() {
   );
 }
 
-export default FooterSimple;
+export default FooterContact;

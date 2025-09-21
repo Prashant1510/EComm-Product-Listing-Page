@@ -16,13 +16,13 @@ const HotDeals = () => {
   ];
 
   return (
-    <div className="bg-gray-50 p-5 rounded-sm shadow-sm w-64">
+    <div className="bg-gray-50 p-5 rounded-sm shadow-sm md:w-72 w-full mt-15 md:mt-0">
       <h2 className="text-lg font-semibold mb-4">Hot Deals</h2>
-      <ul className="space-y-5">
+      <ul className="space-y-5 ">
         {deals.map((deal, index) => (
           <li
             key={index}
-            className="flex justify-between items-center text-gray-700 cursor-pointer"
+            className=" flex justify-between items-center text-gray-700 cursor-pointer"
           >
             <span
               className={`${
