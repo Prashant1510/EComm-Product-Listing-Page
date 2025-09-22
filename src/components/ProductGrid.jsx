@@ -1,74 +1,26 @@
 import React from "react";
 
-// Dummy data: 6 items
-const products = [
-  {
-    id: 1,
-    name: "Nike Air Max 270 React",
-    price: 299.43,
-    oldPrice: 534.23,
-    discount: "24% Off",
-    image: "/images/image1.jpg",
-    hot: true,
-    rating: 4,
-    ratingCount: 136
-  },
-  {
-    id: 2,
-    name: "Nike Air Max 270 React",
-    price: 299.43,
-    oldPrice: 534.23,
-    discount: "24% Off",
-    image: "/images/image2.jpg",
-    hot: true,
-    rating: 3,
-    ratingCount: 95
-  },
-  {
-    id: 3,
-    name: "Nike Air Max 270 React",
-    price: 299.43,
-    oldPrice: 534.23,
-    discount: "24% Off",
-    image: "/images/image3.jpg",
-    hot: true,
-    rating: 5,
-    ratingCount: 184
-  },
-  {
-    id: 4,
-    name: "Nike Air Max 270 React",
-    price: 299.43,
-    oldPrice: 534.23,
-    discount: "24% Off",
-    image: "/images/image4.jpg",
-    hot: true,
-    rating: 4,
-    ratingCount: 75
-  },
-  {
-    id: 5,
-    name: "Nike Air Max 270 React",
-    price: 299.43,
-    oldPrice: 534.23,
-    discount: "24% Off",
-    image: "/images/image5.jpg",
-    hot: true,
-    rating: 4,
-    ratingCount: 156
-  },
-  {
-    id: 6,
-    name: "Nike Air Max 270 React",
-    price: 299.43,
-    oldPrice: 534.23,
-    discount: "24% Off",
-    image: "/images/image6.jpg",
-    hot: true,
-    rating: 5,
-    ratingCount: 210
-  }
+
+// Generate 30 dummy products
+const images = [
+  "/images/image1.jpg",
+  "/images/image2.jpg",
+  "/images/image3.jpg",
+  "/images/image4.jpg",
+  "/images/image5.jpg",
+  "/images/image6.jpg"
 ];
+const products = Array.from({ length: 30 }, (_, i) => ({
+  id: i + 1,
+  name: `Nike Air Max 270 React #${i + 1}`,
+  price: 299.43 + (i % 6) * 10,
+  oldPrice: 534.23 + (i % 6) * 10,
+  discount: "24% Off",
+  image: images[i % images.length],
+  hot: i % 5 === 0,
+  rating: (i % 5) + 1,
+  ratingCount: 50 + (i * 7) % 200
+}));
 
 function ProductCard({ product }) {
   return (
@@ -104,10 +56,15 @@ function ProductCard({ product }) {
   );
 }
 
-function ProductGrid() {
+
+function ProductGrid({ currentPage = 1, productsPerPage = 6 }) {
+  // Calculate which products to show
+  const startIdx = (currentPage - 1) * productsPerPage;
+  const endIdx = startIdx + productsPerPage;
+  const pageProducts = products.slice(startIdx, endIdx);
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      {products.map(product => (
+      {pageProducts.map(product => (
         <div className="relative" key={product.id}>
           <ProductCard product={product} />
         </div>
@@ -117,3 +74,4 @@ function ProductGrid() {
 }
 
 export default ProductGrid;
+export { products };

@@ -1,12 +1,85 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Product Listing Page (React + Vite + Tailwind CSS)
 
-Currently, two official plugins are available:
+A modern, responsive e-commerce product listing page built with React, Vite, and Tailwind CSS. Features include a responsive navbar, collapsible sidebar with filters, product grid, pagination, and a clean, mobile-friendly design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Responsive navigation bar with mobile hamburger menu
+- Collapsible sidebar with filters (hot deals, price range, color, brand)
+- Sidebar overlays content on mobile and is always visible on desktop
+- Product grid with dummy data and ratings
+- Pagination
+- Footer with contact info and payment cards
+- Built with React, Vite, and Tailwind CSS
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+- Node.js (v18 or newer recommended)
+- npm (comes with Node.js)
+
+### Installation
+1. **Clone the repository**
+	```bash
+	git clone <your-repo-url>
+	cd Product\ Listing\ Page/Frontend
+	```
+2. **Install dependencies**
+	```bash
+	npm install
+	```
+
+### Development
+To start the development server with hot reload:
+```bash
+npm run dev
+```
+Visit [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Build for Production
+To build the app for production:
+```bash
+npm run build
+```
+The output will be in the `dist/` folder.
+
+### Preview Production Build
+To locally preview the production build:
+```bash
+npm run preview
+```
+
+## Project Structure
+```
+Frontend/
+├── public/                # Static assets (images, etc.)
+├── src/
+│   ├── components/        # Reusable UI components (Navbar, Sidebar, etc.)
+│   ├── pages/             # Page-level components (Sidebar, Content)
+│   ├── App.jsx            # Main app component
+│   ├── main.jsx           # Entry point
+│   └── index.css          # Tailwind CSS import
+├── package.json           # Project metadata and scripts
+├── vite.config.js         # Vite configuration
+└── README.md              # Project documentation
+```
+
+## Customization
+- Update product data in `src/components/ProductGrid.jsx`.
+- Adjust navigation links in `src/components/Navbar.jsx`.
+- Modify sidebar filters in `src/pages/Sidebar.jsx` and related components.
+
+## Dependencies
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide React](https://lucide.dev/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [@mui/material](https://mui.com/) (for toolbar toggle)
+- [react-range](https://github.com/tajo/react-range) (for price slider)
+
+## License
+This project is for educational/demo purposes. You may use and modify it as you wish.
+
+---
+Feel free to reach out if you have questions or suggestions!
