@@ -1,5 +1,10 @@
 
+
 # Product Listing Page (React + Vite + Tailwind CSS)
+
+<p align="center">
+	<img src="./public/images/screenshot.png" alt="Website Screenshot" width="700" />
+</p>
 
 A modern, responsive e-commerce product listing page built with React, Vite, and Tailwind CSS. Features include a responsive navbar, collapsible sidebar with filters, product grid, pagination, and a clean, mobile-friendly design.
 
